@@ -1,9 +1,7 @@
-function updatemenu() {
-  if (document.getElementById('responsive-menu').checked == true) {
-    document.getElementById('menu').style.borderBottomRightRadius = '0';
-    document.getElementById('menu').style.borderBottomLeftRadius = '0';
-  }else{
-    document.getElementById('menu').style.borderRadius = '10px';
-  }
-}
-
+console.clear();
+const list = document.querySelectorAll('.list');
+const nav = document.querySelector('.navigation');
+list.forEach(item => item.addEventListener('click', function(e){
+	list.forEach(li => li.classList.remove('active'));
+	e.currentTarget.classList.add('active');
+}));
